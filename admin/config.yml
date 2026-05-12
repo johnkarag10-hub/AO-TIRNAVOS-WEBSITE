@@ -6,46 +6,11 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "site"
-    label: "Site Settings"
-    files:
-      - label: "Homepage"
-        name: "home"
-        file: "content/home.yml"
-        fields:
-          - { label: "Main Title", name: "hero_title", widget: "string" }
-          - { label: "Main Text", name: "hero_text", widget: "text" }
-          - { label: "Main Image", name: "hero_image", widget: "image" }
-
   - name: "news"
     label: "News"
     folder: "content/news"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
-
-  - name: "matches"
-    label: "Matches"
-    folder: "content/matches"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Home Team", name: "home_team", widget: "string" }
-      - { label: "Away Team", name: "away_team", widget: "string" }
-      - { label: "Score", name: "score", widget: "string", required: false }
-      - { label: "Venue", name: "venue", widget: "string", required: false }
-
-  - name: "sponsors"
-    label: "Sponsors"
-    folder: "content/sponsors"
-    create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Sponsor Name", name: "name", widget: "string" }
-      - { label: "Logo", name: "logo", widget: "image" }
-      - { label: "Website", name: "url", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
